@@ -14,7 +14,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CSSReset />
       <AuthProvider>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <>
             <PrivateRoute exact path="/" component={Home} />
             <PrivateRoute exact path="/ride/new" component={NewRide} />
